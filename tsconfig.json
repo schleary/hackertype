@@ -1,0 +1,14 @@
+{
+  "version": "1.5.0",
+  "compilerOptions": {
+    "sourceMap": false,
+    "target": "es5",
+    "module": "commonjs",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "out": "main.js"
+  },
+  "files": [
+    "main.ts"
+  ]
+}
