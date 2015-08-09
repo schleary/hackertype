@@ -2,19 +2,36 @@
 
 stdIn.ready(main);
 
-function solveMeFirst(a, b) {
-    return a+b;
+interface ISolver {
+    aValue:number;
+    bValue:number;
+    solve:()=>number;
 }
 
+class Solver implements ISolver {
+
+    aValue:number;
+
+    bValue:number;
+
+    constructor(aValue:number, bValue:number) {
+        this.aValue = aValue;
+        this.bValue = bValue;
+    }
+
+    solve():number {
+        return this.aValue + this.bValue;
+    }
+
+}
+
+
 function main() {
-    // write your code here.
-    // call `readLine()` to read a line.
-    // use console.log() to write to stdout
 
     var a = parseInt(stdIn.readLine());
     var b = parseInt(stdIn.readLine());
 
-    var res = solveMeFirst(a, b);
-    console.log(res);
+    var solver = new Solver(a, b);
 
+    console.log(solver.solve());
 }
