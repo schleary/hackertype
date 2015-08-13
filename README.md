@@ -12,5 +12,3 @@ Build: > tsc -p .
 Deploy: copy contents of main.js into hacker rank code box.
 
 Happy hacking.
-
-HW.
